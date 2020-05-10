@@ -27,7 +27,7 @@ cat   : Simple version of UNIX utility cat
         python -m eepy.cat -h
 """
 
-__version__ = '0.3.48'
+__version__ = '0.3.49'
 
 from .art import *
 from .point import *
