@@ -1,0 +1,10 @@
+## .gitignore for eepy ##
+
+# Distribution / packaging
+build/
+dist/
+eepy.egg-info/
+
+# backup script
+bu.sh
+
