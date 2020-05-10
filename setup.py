@@ -13,7 +13,7 @@ setuptools.setup(
     author_email="min.skku@gmail.com",
     url="https://pypi.org/project/eepy/",
     description="Package for a Python course",
-    license="MIT License",
+    license="GNU General Public License v3 (GPLv3)",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
