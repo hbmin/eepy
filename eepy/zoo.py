@@ -54,13 +54,13 @@ def unpacking(*args, **kwargs):
     (1) Unpacking positional arguments to call addall().
             print(addall(*args))
     (2) Unpacking 1st 3 positional argument to call add()
-            if len(args) > 3: print(add(*args[0:4]))
+            if len(args) >= 3: print(add(*args[0:3]))
     (3) Unpacking keyword arguments to call argprint()
             argprint(**kwargs)
     """
     print(addall(*args))
-    if len(args) > 3:
-        print(add(*args[0:4]))
+    if len(args) >= 3:
+        print(add(*args[0:3]))
     argprint(**kwargs)
 
 
