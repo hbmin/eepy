@@ -9,7 +9,6 @@
 if [ "$#" -gt 0 ] && [ "$1" = "-pypi" ]; then
 	echo "Uploading to FORMAL site (pypi.org) ..."
 	python3 -m twine upload dist/*
-	exit
 elif [ "$#" -gt 0 ] && [ "$1" = "-test" ]; then
 	echo "Uploading to TEST site (test.pypi.org) ..."
 	python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
