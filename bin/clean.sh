@@ -28,7 +28,7 @@ if [ "$yesno" = "y" ] || [ "$yesno" = "yes" ]; then
 	for folder in "${DIRS[@]}"
 	do
 		if [ -d "$folder" ]; then
-            deleted=1
+			deleted=1
 			echo "Deleting $folder"
 			${RM} "$folder"
 		fi
