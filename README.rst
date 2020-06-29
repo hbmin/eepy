@@ -4,6 +4,8 @@ eepy - modules for a Python course
 eepy is a collection of Python modules and programs which are intended to be used at a Python course in Sungkyunkwan University.
 Over half of the codes came from introcs package by Dr. Walker M. White under MIT license, and we greatly appeciate his package for being released under open source license.
 
+* eepy at PYPI : <https://pypi.org/project/eepy/>
+* eepy at github : <https://github.com/hbmin/eepy>
 
 Installation
 ============
