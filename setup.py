@@ -11,7 +11,7 @@ setuptools.setup(
     version=APPVERSION,
     author="H.B. Min",
     author_email="min.skku@gmail.com",
-    url="https://pypi.org/project/eepy/",
+    url="https://github.com/hbmin/eepy",
     description="Package for a Python course",
     license="GNU General Public License v3 (GPLv3)",
     long_description=long_description,

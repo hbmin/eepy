@@ -1,9 +1,10 @@
 #
 #  Copyright (c) 2019 by Hyoung Bok Min, All rights reserved.
 #
-#  File       : __init__.py
-#  Written on : Feb. 10, 2019
-#  Author     : Hyoung Bok Min (min.skku@gmail.com)
+#  File        : __init__.py
+#  Written on  : Feb. 10, 2019
+#  Last updated: June 29, 2020
+#  Author      : Hyoung Bok Min (min.skku@gmail.com)
 #
 """This package is used in a Python course for beginners.
 
@@ -27,7 +28,7 @@ cat   : Simple version of UNIX utility cat
         python -m eepy.cat -h
 """
 
-__version__ = '0.3.52'
+__version__ = '0.3.53'
 
 from .art import *
 from .point import *
