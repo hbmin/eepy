@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 #
-# Copyright (c) 2019 by Hyoung Bok Min, All rights reserved.
+# Copyright (c) 2019-2021 by Hyoung Bok Min, All rights reserved.
 #
 #  File       : cat.py
-#  Written on : Dec. 06, 2019
+#  Written on : Jan. 20, 2021
 #  Author     : Hyoung Bok Min (min.skku@gmail.com)
-#  Version    : 1.3
+#  Version    : 1.4
 #  Modification History :
+#    v1.4 : Jan. 20, 2021
+#      (1) Function ``iterable(obj)`` is added.
+#      (2) The following 2 assertions are added for stricter checking of
+#          preconditions for function ``cat()``.
+#          - assert iterable(filenames)
+#          - assert all(isinstance(fname, str) for fname in filenames)
 #    v1.3 : Dec. 06, 2019
 #      (1) Create __version__ to record version number of this program.
 #      (2) Add '-V' option to show __version__.
@@ -61,7 +67,7 @@ use_stdin = False         # -  : use stdin as input file
 pycatcmd = 'pycat'
 
 # version
-__version__ = '1.3';
+__version__ = '1.4';
 
 
 def cat(filenames):
@@ -73,11 +79,14 @@ def cat(filenames):
 
     :returns: number of files for which printing has failed
     """
-    assert filenames or use_stdin, 'need at least one file or \'-\'.'
+    assert filenames or use_stdin, "Need at least one file or '-'."
     if not filenames and use_stdin:
         filenames = ['-']
     if isinstance(filenames, str):
         filenames = [filenames]
+    assert iterable(filenames), 'The argument shall be an iterable.'
+    assert all(isinstance(fname, str) for fname in filenames), \
+        'All elements of the argument shall be strings.'
 
     if not show_nonprinting and keep_encoding:
         stdout = None    # We use sys.stdout.buffer.write() for this case.
@@ -248,6 +257,26 @@ def cat(filenames):
     if stdout is not None:
         stdout.close()
     return failcount
+
+
+def iterable(obj):
+    """Helper function to check if given object is iterable.
+
+    This method checks if given object ``obj`` is iterable or not.
+    FYI, you may use isinstance(obj, Iterable) defined at collections.abc.
+
+    :param obj: We check if this ``obj`` is iterable or not.
+    :type obj: any
+
+    :returns: True if ``obj`` is iterable, False otherwise.
+    :rtype: bool
+    """
+    try:
+        iter(obj)
+    except TypeError:
+        return False
+    else:
+        return True
 
 
 def usage_cat(blank=False, file=None, version=False):

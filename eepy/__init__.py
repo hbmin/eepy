@@ -3,7 +3,7 @@
 #
 #  File        : __init__.py
 #  Written on  : Feb. 10, 2019
-#  Last updated: Jan. 04, 2020
+#  Last updated: Jan. 20, 2021
 #  Author      : Hyoung Bok Min (min.skku@gmail.com)
 #
 """This package is used in a Python course for beginners.
@@ -28,7 +28,7 @@ cat   : Simple version of UNIX utility cat
         python -m eepy.cat -h
 """
 
-__version__ = '0.3.54'
+__version__ = '0.3.55'
 
 from .art import *
 from .point import *

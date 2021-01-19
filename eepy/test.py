@@ -157,7 +157,7 @@ def get_word(string, index):
 
     :precondition: index >= 0
     """
-    assert type(string) == str, "strinng shall be of type str."
+    assert type(string) == str, "string shall be of type str."
     assert type(index) == int, "index shall be of type int."
     assert index >= 0, "index shall be non-negative integer."
 
@@ -177,7 +177,7 @@ def number_of_words(string):
     :return: number of words in the ``string``.
     :rtype:  int
     """
-    assert type(string) == str, "strinng shall be of type str."
+    assert type(string) == str, "string shall be of type str."
 
     return len(string.strip().split())
 
