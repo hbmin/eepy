@@ -37,6 +37,4 @@ from .test import *
 from .zoo import *
 from time import sleep
 
-
-def eepy(n):
-    sleep(n)
+eepy = sleep
