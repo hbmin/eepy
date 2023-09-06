@@ -26,6 +26,7 @@ zoo   : helpful small functions such as
 cat   : Simple version of UNIX utility cat
         Use the following command to learn how to use this program.
         python -m eepy.cat -h
+eepy  : Use when ur eepy and need a nap.  
 """
 
 __version__ = '0.3.55'
@@ -34,4 +35,8 @@ from .art import *
 from .point import *
 from .test import *
 from .zoo import *
+from time import sleep
 
+
+def eepy(n):
+    sleep(n)
