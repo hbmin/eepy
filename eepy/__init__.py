@@ -29,7 +29,7 @@ cat   : Simple version of UNIX utility cat
 eepy  : Use when ur eepy and need a nap.  
 """
 
-__version__ = '0.3.55'
+__version__ = '0.3.56'
 
 from .art import *
 from .point import *
